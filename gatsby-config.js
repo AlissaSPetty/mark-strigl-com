@@ -5,6 +5,7 @@ module.exports = {
     author: ``,
   },
   plugins: [
-    `gatsby-plugin-twitter`
+    `gatsby-plugin-twitter`,
+    `gatsby-plugin-react-helmet`
   ]
 }
