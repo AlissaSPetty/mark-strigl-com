@@ -14,7 +14,8 @@ const PageWrapper = styled.div`
     line-height: 1.6em;
   }
   h1 {
-    font-size: 3em
+    font-size: 3em;
+    margin: 3rem 0;
   }
   h1, h2, h3 {
     font-family: sans-serif;
@@ -53,7 +54,7 @@ class captaint extends Component {
 
             <h1>Captain T</h1>
 
-            <img src="CaptainT-USAliens.jpg" />
+            <img src="../images/CaptainT-USAliens.jpg" />
 
             <h2><a href="CaptainT-1-WeAreTheWorld.mp3">We Are the World</a></h2>
             <audio src="CaptainT-1-WeAreTheWorld.mp3" preload="none" controls="controls"></audio>
@@ -73,11 +74,11 @@ class captaint extends Component {
             <h2><a href="CaptainT-6-CovertIntelligence.mp3">Covert Intelligence</a></h2>
             <audio src="CaptainT-6-CovertIntelligence.mp3" preload="none" controls="controls"></audio>
 
-            <img src="face.jpg" />
+            <img src="../images/face.jpg" />
 
             <h4><a href="hollywood.pdf">Click here for a newly declassified message dated July 4th, 1997 from the late Shermy Sheldon AKA Hollywood Gazza T Jabbar, Minister of Propaganda for the New Frontier</a></h4>
 
-            <img src="montage.jpg" />
+            <img src="../images/montage.jpg" />
 
 
           </section>
