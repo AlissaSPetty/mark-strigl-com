@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 const PageWrapper = styled.div`
-  body {
+.captainT {
     background-color: #000;
     color: #fff;
     font-family: Georgia, serif;
@@ -50,7 +50,7 @@ class captaint extends Component {
           <meta name="author" content="Derek Sivers" />
         </Helmet>
         <body>
-          <section id="content">
+          <section className="captainT" id="content">
 
             <h1>Captain T</h1>
 

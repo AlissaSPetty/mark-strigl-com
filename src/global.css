@@ -78,3 +78,30 @@ pre {
   border: 1px solid #ddd;
   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
 }
+
+.captainT {
+  background-color: #000;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  padding: 0 5px;
+  margin: 0 auto;
+  max-width: 40em;
+  line-height: 1.6em;
+}
+h1 {
+  font-size: 3em;
+  margin: 3rem 0;
+}
+h1, h2, h3 {
+  font-family: sans-serif;
+}
+#content {
+  align: center;
+}
+a {
+  color: #ff0;
+}
+img { 
+  display: block;
+}
