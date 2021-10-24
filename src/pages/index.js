@@ -352,6 +352,7 @@ class Home extends Component {
 
   render() {
     return (
+      <div>
       <PageWrapper>
         {this.state.hasMounted &&
           <div>
@@ -490,6 +491,7 @@ class Home extends Component {
       </div>
       }
       </PageWrapper>
+      </div>
     );
   };
 }

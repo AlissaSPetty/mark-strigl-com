@@ -1,7 +1,8 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
-import { Helmet } from "react-helmet";
+import './src/global.css';
 
 //import AppProvider from 'store/provider';
 //import wrapPageElementWithTransition from 'helpers/wrapPageElement';

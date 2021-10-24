@@ -97,7 +97,7 @@ h1, h2, h3 {
   font-family: sans-serif;
 }
 #content {
-  align: center;
+  text-align: center;
 }
 a {
   color: #ff0;

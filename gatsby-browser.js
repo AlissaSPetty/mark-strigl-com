@@ -1,9 +1,28 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
+import { renderToString } from 'react-dom/server';
+import { ServerStyleSheet } from 'styled-components';
 import './src/global.css';
 
-// React Context in Browser
-// eslint-disable-next-line react/prop-types
+//import AppProvider from 'store/provider';
+//import wrapPageElementWithTransition from 'helpers/wrapPageElement';
+
+export const replaceRenderer = ({
+  bodyComponent,
+  replaceBodyHTMLString,
+  setHeadComponents,
+}) => {
+  // React Context in SSR/build
+  const ConnectedBody = () =>
+      <MetaInformation title="Mark Strigl" />
+      {bodyComponent}
+
+  // Add styled-components in SSR/build
+  const sheet = new ServerStyleSheet();
+  const bodyHTML = renderToString(sheet.collectStyles(<ConnectedBody />));
+  const styleElement = sheet.getStyleElement();
+  setHeadComponents(styleElement);
+};
 
 const MetaInformation = (props) => {
   const { title, description, image, url, twitter } = props;
