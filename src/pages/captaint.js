@@ -28,6 +28,7 @@ const PageWrapper = styled.div`
   }
   img { 
     display: block;
+    margin: 0 auto;
   }
 `;
 
@@ -56,23 +57,23 @@ class captaint extends Component {
 
             <img src="../images/CaptainT-USAliens.jpg" />
 
-            <h2><a href="CaptainT-1-WeAreTheWorld.mp3">We Are the World</a></h2>
-            <audio src="CaptainT-1-WeAreTheWorld.mp3" preload="none" controls="controls"></audio>
+            <h2><a href="../mp3/CaptainT-1-WeAreTheWorld.mp3">We Are the World</a></h2>
+            <audio src="../mp3/CaptainT-1-WeAreTheWorld.mp3" preload="none" controls="controls"></audio>
 
-            <h2><a href="CaptainT-2-AmericasFree.mp3">America's Free</a></h2>
-            <audio src="CaptainT-2-AmericasFree.mp3" preload="none" controls="controls"></audio>
+            <h2><a href="../mp3/CaptainT-2-AmericasFree.mp3">America's Free</a></h2>
+            <audio src="../mp3/CaptainT-2-AmericasFree.mp3" preload="none" controls="controls"></audio>
 
-            <h2><a href="CaptainT-3-AquaBlue.mp3">Aqua Blue</a></h2>
-            <audio src="CaptainT-3-AquaBlue.mp3" preload="none" controls="controls"></audio>
+            <h2><a href="../mp3/CaptainT-3-AquaBlue.mp3">Aqua Blue</a></h2>
+            <audio src="../mp3/CaptainT-3-AquaBlue.mp3" preload="none" controls="controls"></audio>
 
-            <h2><a href="CaptainT-4-DisturbingAbduction.mp3">Disturbing Abduction</a></h2>
-            <audio src="CaptainT-4-DisturbingAbduction.mp3" preload="none" controls="controls"></audio>
+            <h2><a href="../mp3/CaptainT-4-DisturbingAbduction.mp3">Disturbing Abduction</a></h2>
+            <audio src="../mp3/CaptainT-4-DisturbingAbduction.mp3" preload="none" controls="controls"></audio>
 
-            <h2><a href="CaptainT-5-BannerIncredibleHulk.mp3">Banner (Incredible Hulk)</a></h2>
-            <audio src="CaptainT-5-BannerIncredibleHulk.mp3" preload="none" controls="controls"></audio>
+            <h2><a href="../mp3/CaptainT-5-BannerIncredibleHulk.mp3">Banner (Incredible Hulk)</a></h2>
+            <audio src="../mp3/CaptainT-5-BannerIncredibleHulk.mp3" preload="none" controls="controls"></audio>
 
-            <h2><a href="CaptainT-6-CovertIntelligence.mp3">Covert Intelligence</a></h2>
-            <audio src="CaptainT-6-CovertIntelligence.mp3" preload="none" controls="controls"></audio>
+            <h2><a href="../mp3/CaptainT-6-CovertIntelligence.mp3">Covert Intelligence</a></h2>
+            <audio src="../mp3/CaptainT-6-CovertIntelligence.mp3" preload="none" controls="controls"></audio>
 
             <img src="../images/face.jpg" />
 
