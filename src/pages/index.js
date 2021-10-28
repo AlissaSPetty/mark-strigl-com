@@ -383,7 +383,7 @@ class Home extends Component {
                 <a target="_blank" rel="noopener noreferrer" href="http://talkingrock.cnjradio.com">
                   <li>Talking Rock Podcast</li>
                 </a>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.captain.com">
+                <a target="_blank" rel="noopener noreferrer" href="https://markstrigl.net/captaint/">
                   <li>The Mysterious Captain T</li>
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/space.pony/">
@@ -448,7 +448,7 @@ class Home extends Component {
                   <a target="_blank" rel="noopener noreferrer" href="http://talkingrock.cnjradio.com">
                     <li>Talking Rock Podcast</li>
                   </a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://captaint.com/">
+                  <a target="_blank" rel="noopener noreferrer" href="https://markstrigl.net/captaint/">
                     <li>The Mysterious Captain T</li>
                   </a>
                   <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/space.pony/">
