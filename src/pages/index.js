@@ -185,7 +185,7 @@ class Home extends Component {
                 </ul>
               </div>
             </div>
-            <div className="footer">
+            <div className="top">
               <div className="mailchimp">
                 <link
                   href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css"
@@ -243,9 +243,6 @@ class Home extends Component {
                     </div>
                   </form>
                 </div>
-              </div>
-              <div className="copyright">
-                <p>© 2023 Mark Strigl</p>
               </div>
             </div>
           </div>

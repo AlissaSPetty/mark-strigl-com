@@ -7,6 +7,9 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  @media only screen and (max-width: 1200px) {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
   .center-wrapper {
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
@@ -17,14 +20,16 @@ body {
     min-width: 130rem;
     height: 100%;
     @media only screen and (max-width: 1200px) {
-      height: auto;
+      height: 100vh;
       width: 100%;
       flex-direction: column;
+      min-height: 30rem;
+      min-width: 30rem;
+      @media only screen and (max-width: 800px) {
+        position: relative;
+        top: 90px;
+      }
     }
-    @media only screen and (max-width: 800px) {
-      min-height: 100vh;
-      min-width: 100%;
-  }
 }
   .right,
   .left {
@@ -48,8 +53,11 @@ body {
       @media only screen and (max-width: 1200px) {
         font-size: 3rem;
         padding: 2rem 2rem 7rem;
-        width: 100%;
+        width: auto;
        }
+      @media only screen and (max-width: 800px) {
+        font-size: 2.5rem;
+      }
       span {
         font-family: "Lobster", cursive;
         color: #e81838;
@@ -60,6 +68,10 @@ body {
       text-align: left;
       color: white;
       font-size: 2rem;
+      @media only screen and (max-width: 800px) {
+        padding: 1rem 1rem 0;
+        text-align: center;
+      }
     }
     .container {
       background: rgba(0, 0, 0, 0);
@@ -91,8 +103,10 @@ body {
         left: 0;
         padding: 0 3rem;
         position: absolute;
-        top: 1rem;
-        width: 50%;
+        top: 7rem;
+      }
+      @media only screen and (max-width: 600px) {
+        top: 0;
       }
       a {
         background: white;
@@ -114,8 +128,8 @@ body {
       @media only screen and (max-width: 1200px) { 
         width: 80%;
       }
-      @media only screen and (max-width:800px) { 
-        width: 100%;
+      @media only screen and (max-width: 600px) { 
+        width: 90%;
       }
     }
   }
@@ -170,7 +184,7 @@ ul {
     }
   }
 }
-.footer {
+.top {
   align-items: center;
   background-color: rgba(0, 0, 0, .95);
   color: white;
@@ -178,7 +192,7 @@ ul {
   flex-direction: row;
   justify-content: space-around;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   @media only screen and (max-width: 1200px) {
@@ -187,14 +201,11 @@ ul {
   .mailchimp {
     width: 100%;
     max-width: 65rem;
+    @media only screen and (max-width: 800px) {
+      padding: 0 1rem;
+    }
     @media only screen and (max-width: 600px) {
       margin-top: 3rem;
-    }
-  }
-  .copyright {
-    p {
-      padding: 1rem 0;
-      font-weight: bold;
     }
   }
   #mc_embed_signup {
@@ -203,6 +214,9 @@ ul {
       align-items: center;
       display: flex;
       justify-content: center;
+      @media only screen and (max-width: 600px) {
+        width: 90%;
+      }
       label {
         min-width: 23rem;
         padding-right: 0.5rem;
@@ -211,6 +225,7 @@ ul {
           position: absolute;
           padding: 0 0 0 1rem;
           top: -1.6rem;
+          text-align: center;
         }
       }
       input.email {
