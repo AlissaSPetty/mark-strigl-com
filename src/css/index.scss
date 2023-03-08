@@ -1,7 +1,12 @@
 body {
-  background: url('../images/new-bg.jpg') no-repeat;
-  font-family: 'Oswald', sans-serif;
-  width: 100%;
+  background: url("../images/new-bg.jpg") no-repeat;
+  font-family: "Oswald", sans-serif;
+  margin: 0 auto;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
   .menu-wrapper {
     position: absolute;
     margin: auto;
@@ -15,13 +20,15 @@ body {
   }
   .mobile-menu {
     display: none;
-    overflow: hidden; 
+    overflow: hidden;
     transition: 0.5s ease-in-out;
     transform: translateX(50%);
     z-index: 999;
     @media only screen and (max-width: 1200px) {
       @keyframes slide {
-        100% { right: 0rem; }
+        100% {
+          right: 0rem;
+        }
       }
       &.show {
         animation: slide 0.5s forwards;
@@ -33,7 +40,9 @@ body {
         width: 30vw;
         height: 100vh;
         transform: translateX(0);
-        .header, .buttons, li {
+        .header,
+        .buttons,
+        li {
           margin-left: 10rem;
         }
       }
@@ -46,57 +55,77 @@ body {
     @media only screen and (max-width: 500px) {
       &.show {
         width: 100vw;
-        .header, .buttons, li {
+        .header,
+        .buttons,
+        li {
           margin-left: 5rem;
         }
       }
     }
   }
-  .container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    h2  {
-      text-align: center;
-      text-shadow: 10px 0 0 10px #000;
-      color: white;
-      font-size: 3.5rem;
-      margin: 10rem auto 1rem;
-      line-height: 1.25;
-      overflow-wrap: break-word;
-      max-width: 700px;
-      padding: 1rem;
-      text-shadow: 10px 0px 10px #000;
-      span {
-        color: white;
-      }
-    }
-  }
 
   .center-wrapper {
+    background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: center;
-    margin: 10rem auto;
-    overflow: hidden;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 100rem;
+    min-width: 130rem;
+    height: 100%;
     @media only screen and (max-width: 1200px) {
       height: auto;
       flex-direction: column-reverse;
     }
   }
-  .right, .left {
+  .right,
+  .left {
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 50%;
     @media only screen and (max-width: 1200px) {
       flex-direction: row;
       max-width: initial;
     }
   }
+  .right {
+    width: 70%;
+    h2 {
+      text-align: center;
+      color: white;
+      font-size: 3.5rem;
+      line-height: 1.25;
+      padding: 1rem;
+      text-shadow: 10px 0px 10px #000;
+      width: 75rem;
+      span {
+        font-family: "Lobster", cursive;
+        color: #e81838;
+        font-style: italic;
+      }
+    }
+    p {
+      text-align: left;
+      color: white;
+      font-size: 2rem;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+      width: 100%;
+      .audio {
+        height: 7rem;
+        width: 30rem;
+        padding: 0 1rem 0 0;
+      }
+    }
     .social {
       display: flex;
       justify-content: center;
-      padding: 0 3rem;
+      padding: 0 0 7rem;
       width: 100%;
       @media only screen and (max-width: 1200px) {
         display: flex;
@@ -121,7 +150,8 @@ body {
         }
       }
     }
-    .tr-podcast, .tm-podcast {
+    .tr-podcast,
+    .tm-podcast {
       padding: 1rem 3rem;
     }
     @media only screen and (max-width: 1200px) {
@@ -136,107 +166,109 @@ body {
         margin: 0 auto;
       }
     }
-      .twitter {
-        margin-top: 2rem;
-        width: 50%;
-      }
-  }
-  .left {
-    @media only screen and (max-width: 1200px) {
-      display: none;
+    .twitter {
+      margin-top: 2rem;
+      width: 75%;
     }
   }
-  .header {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 2.75rem;
-    letter-spacing: 0.1rem;
-    margin: 2rem 0 1rem;
-    width: 50%;
+}
+.left {
+  width: 30%;
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+.header {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.75rem;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0 1rem;
+  width: 50%;
+  text-shadow: 10px 0px 10px #000;
+  &:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 0.5rem;
+    margin-top: 1rem;
+    width: 10rem;
+  }
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  a {
+    margin: 0.5rem 0;
+  }
+}
+ul {
+  width: 50%;
+  li {
     text-shadow: 10px 0px 10px #000;
-    &:after {
-      background: #fff;
-      content: "";
-      display: block;
-      height: 0.5rem;
-      margin-top: 1rem;
-      width: 10rem;
-    }
-  }
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    a {
-      margin: 0.5rem 0;
-    }
-  }
-  ul {
-    width: 50%;
-    li {
-      text-shadow: 10px 0px 10px #000;
-      color: white;
-      list-style-type: '• ';
-      line-height: 1.5;
-      transition: 0.25s ease-in-out;
-      padding: .5rem 0;
-      &:hover {
-        color: #251228;
-        text-decoration: underline;
-      }
-    }
-  }
-  .footer {
-    align-items: center;
     color: white;
-    text-shadow: 10px 0 0 10px #000;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 160rem;
-    margin: 0 auto;
-    position: relative;
+    list-style-type: "• ";
+    line-height: 1.5;
+    transition: 0.25s ease-in-out;
+    padding: 0.5rem 0;
+    &:hover {
+      color: #251228;
+      text-decoration: underline;
+    }
+  }
+}
+.footer {
+  align-items: center;
+  background-color: rgba(0, 0, 0, .95);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+  .mailchimp {
     width: 100%;
-    @media only screen and (max-width: 1200px) {
-      flex-direction: column;
+    max-width: 65rem;
+    @media only screen and (max-width: 600px) {
+      margin-top: 3rem;
     }
-    .mailchimp {
-      @media only screen and (max-width: 600px) {
-        margin-top: 3rem;
-      }
+  }
+  .copyright {
+    p {
+      padding: 1rem 0;
+      font-weight: bold;
     }
-    .copyright {
-      p {
-        padding: 1rem 0;
-        font-weight: bold;
-      }
-    }
-    #mc_embed_signup {
-      width: 100%;
-      #mc_embed_signup_scroll {
-        background-color: #fff0;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        label {
-          min-width: 23rem;
-          padding-right: 0.5rem;
-          width: 100%;
-          @media only screen and (max-width: 600px) {
+  }
+  #mc_embed_signup {
+    width: 100%;
+    #mc_embed_signup_scroll {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      label {
+        min-width: 23rem;
+        padding-right: 0.5rem;
+        width: 100%;
+        @media only screen and (max-width: 600px) {
           position: absolute;
           padding: 0 0 0 1rem;
           top: -1.6rem;
-          }
         }
-        input.email {
-          min-width: 20rem;
-        }
-        .button {
-          background: black;
-          border: 0.5px solid white;
-        }
+      }
+      input.email {
+        min-width: 20rem;
+      }
+      .button {
+        background: black;
+        border: 0.5px solid white;
       }
     }
   }
+}
