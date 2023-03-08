@@ -7,63 +7,6 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  .menu-wrapper {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    width: 4rem;
-    cursor: pointer;
-    @media only screen and (min-width: 1200px) {
-      display: none;
-    }
-  }
-  .mobile-menu {
-    display: none;
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
-    transform: translateX(50%);
-    z-index: 999;
-    @media only screen and (max-width: 1200px) {
-      @keyframes slide {
-        100% {
-          right: 0rem;
-        }
-      }
-      &.show {
-        animation: slide 0.5s forwards;
-        background: black;
-        right: -50rem;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        width: 30vw;
-        height: 100vh;
-        transform: translateX(0);
-        .header,
-        .buttons,
-        li {
-          margin-left: 10rem;
-        }
-      }
-    }
-    @media only screen and (max-width: 900px) {
-      &.show {
-        width: 50vw;
-      }
-    }
-    @media only screen and (max-width: 500px) {
-      &.show {
-        width: 100vw;
-        .header,
-        .buttons,
-        li {
-          margin-left: 5rem;
-        }
-      }
-    }
-  }
-
   .center-wrapper {
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
@@ -75,29 +18,38 @@ body {
     height: 100%;
     @media only screen and (max-width: 1200px) {
       height: auto;
-      flex-direction: column-reverse;
+      width: 100%;
+      flex-direction: column;
     }
+    @media only screen and (max-width: 800px) {
+      min-height: 100vh;
+      min-width: 100%;
   }
+}
   .right,
   .left {
     align-items: center;
     display: flex;
     flex-direction: column;
-    @media only screen and (max-width: 1200px) {
-      flex-direction: row;
-      max-width: initial;
-    }
   }
   .right {
     width: 70%;
+    @media only screen and (max-width: 800px) {
+      width: 100%;
+    }
     h2 {
       text-align: center;
       color: white;
       font-size: 3.5rem;
       line-height: 1.25;
-      padding: 1rem;
+      padding: 1rem 1rem 4rem;
       text-shadow: 10px 0px 10px #000;
       width: 75rem;
+      @media only screen and (max-width: 1200px) {
+        font-size: 3rem;
+        padding: 2rem 2rem 7rem;
+        width: 100%;
+       }
       span {
         font-family: "Lobster", cursive;
         color: #e81838;
@@ -116,10 +68,16 @@ body {
       align-items: center;
       padding: 2rem 0;
       width: 100%;
+      @media only screen and (max-width: 800px) {
+        flex-direction: column;
+      }
       .audio {
         height: 7rem;
         width: 30rem;
         padding: 0 1rem 0 0;
+      @media only screen and (max-width: 800px) {
+        padding: 1rem;
+      }
       }
     }
     .social {
@@ -150,33 +108,20 @@ body {
         }
       }
     }
-    .tr-podcast,
-    .tm-podcast {
-      padding: 1rem 3rem;
-    }
-    @media only screen and (max-width: 1200px) {
-      .podcasts {
-        margin: 2rem;
-      }
-    }
-    @media only screen and (max-width: 800px) {
-      flex-wrap: wrap;
-      margin: 0 auto;
-      .podcasts {
-        margin: 0 auto;
-      }
-    }
     .twitter {
       margin-top: 2rem;
       width: 75%;
+      @media only screen and (max-width: 1200px) { 
+        width: 80%;
+      }
+      @media only screen and (max-width:800px) { 
+        width: 100%;
+      }
     }
   }
 }
 .left {
   width: 30%;
-  @media only screen and (max-width: 1200px) {
-    display: none;
-  }
 }
 .header {
   color: white;
@@ -195,6 +140,9 @@ body {
     margin-top: 1rem;
     width: 10rem;
   }
+  @media only screen and (max-width: 1200px) { 
+    display: none;
+  }
 }
 .buttons {
   display: flex;
@@ -206,6 +154,9 @@ body {
 }
 ul {
   width: 50%;
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
   li {
     text-shadow: 10px 0px 10px #000;
     color: white;
