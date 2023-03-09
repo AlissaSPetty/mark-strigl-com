@@ -2,7 +2,7 @@
   "name": "mark-strigl-portfolio",
   "private": true,
   "description": "A portfolio for Mark Strigl",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Alissa Petty <alissaspetty@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
