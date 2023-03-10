@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../css/index.scss";
 import Menu from "../components/mobileMenu/mobileMenu";
-import Links from '../components/Links/Links';
+import Links from "../components/Links/Links";
 
 class Home extends Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class Home extends Component {
       toggle: false,
       hasMounted: false,
       email: "",
+      isMobile: false
     };
   }
 
@@ -25,10 +26,19 @@ class Home extends Component {
     });
   };
 
+  updateDimensions = () => {
+    window.innerWidth >= 1200 ? this.setState({ isMobile: false }) : this.setState({isMobile: true});
+    }
+
   componentDidMount() {
     this.setState({
       hasMounted: true,
     });
+    window.addEventListener('resize', this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
   }
 
   componentDidUpdate(prevState) {
@@ -43,11 +53,13 @@ class Home extends Component {
         {this.state.hasMounted && (
           <div>
             <div id="outer-container">
-              <Menu
-                pageWrapId={"page-wrap"}
-                outerContainerId={"outer-container"}
-                right
-              />
+              {this.state.isMobile &&
+                <Menu
+                  pageWrapId={"page-wrap"}
+                  outerContainerId={"outer-container"}
+                  right
+                />
+              }
               <main id="page-wrap">
                 <div className="center-wrapper">
                   <div className="right">
@@ -121,8 +133,12 @@ class Home extends Component {
                     </div>
                   </div>
                   <div className="left">
-                    <div className="header">Links</div>
-                    <Links />
+                    {!this.state.isMobile &&
+                    <div>
+                      <div className="header">Links</div>
+                      <Links />
+                      </div>
+                    }
                   </div>
                 </div>
                 <div className="top">
