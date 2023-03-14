@@ -96,11 +96,32 @@ h1 {
 h1, h2, h3 {
   font-family: sans-serif;
 }
+
+ul {
+    @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+li {
+  text-shadow: 10px 0px 10px #000;
+  color: white;
+  list-style-type: "• ";
+  line-height: 1.25;
+  transition: 0.25s ease-in-out;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+li:hover {
+    color: #e81838;
+    text-decoration: underline;
+  }
+
 #content {
   text-align: center;
 }
 a {
-  color: #ff0;
+  color: #fff;
 }
 img { 
   display: block;

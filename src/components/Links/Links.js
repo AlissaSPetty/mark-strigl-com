@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import "./Links";
 
 class Links extends Component {
-  render () {
+  render() {
     return (
       <ul>
+        <h1>Links</h1>
         <a
           target="_blank"
           rel="noopener noreferrer"

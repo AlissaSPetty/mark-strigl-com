@@ -1,20 +1,22 @@
 import React, { Component } from "react";
-import { reveal as Menu } from 'react-burger-menu';
+import { slide as Menu } from "react-burger-menu";
 import "./mobileMenu.scss";
 import Links from "../Links/Links";
 
-class mobileMenu extends Component {
-  showSettings (event) {
+class MobileMenu extends Component {
+  showSettings(event) {
     event.preventDefault();
   }
 
-  render () {
+  render() {
     return (
-      <Menu>
-        <Links />
-      </Menu>
+      <>
+        <Menu right>
+          <Links />
+        </Menu>
+      </>
     );
   }
 }
 
-export default mobileMenu;
+export default MobileMenu;

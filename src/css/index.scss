@@ -2,16 +2,14 @@ body {
   background: url("../images/new-bg.jpg") no-repeat;
   font-family: "Oswald", sans-serif;
   margin: 0 auto;
-  height: 100vh;
   justify-content: center;
   display: flex;
   align-items: center;
   position: relative;
-  @media only screen and (max-width: 1200px) {
-    background-color: rgba(0, 0, 0, 0.75);
-  }
+  background-color: rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+
   .center-wrapper {
-    background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,6 +177,7 @@ body {
   width: 100%;
   @media only screen and (max-width: 1200px) {
     flex-direction: column;
+    height: 15rem;
   }
   .mailchimp {
     width: 100%;
@@ -193,11 +192,12 @@ body {
   #mc_embed_signup {
     width: 100%;
     #mc_embed_signup_scroll {
-      align-items: center;
       display: flex;
       justify-content: center;
-      @media only screen and (max-width: 600px) {
-        width: 90%;
+      @media only screen and (max-width: 1200px) {
+      justify-content: flex-start;
+        width: 70%
+        padding 0 0 0 1rem;
       }
       label {
         min-width: 23rem;
@@ -207,7 +207,7 @@ body {
           position: absolute;
           padding: 0 0 0 1rem;
           top: -1.6rem;
-          text-align: center;
+          text-align: left;
         }
       }
       input.email {
