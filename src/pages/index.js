@@ -69,6 +69,11 @@ class Home extends Component {
                     <span>Mark Strigl</span> is a professional radio personality
                     who is currently available for voice work.
                   </h2>
+                  <h3>
+                    <a href="mailto:markstrigl@gmail.com">
+                      markstrigl@gmail.com
+                    </a>
+                  </h3>
                   <div className="social">
                     <a
                       target="_blank"
