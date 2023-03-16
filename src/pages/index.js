@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "../css/index.scss";
-import MobileMenu from "../components/mobileMenu/mobileMenu";
-import Links from "../components/Links/Links";
+import "css/index.scss";
+import MobileMenu from "components/mobileMenu/mobileMenu";
+import Links from "components/Links/Links";
 
 class Home extends Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class Home extends Component {
   }
 
   componentDidUpdate(prevState) {
-    if (this.state.hasMounted != prevState.hasMounted) {
+    if (this.state.hasMounted !== prevState.hasMounted) {
       this.injectScript("https://platform.twitter.com/widgets.js");
     }
   }
@@ -74,7 +74,7 @@ class Home extends Component {
                       markstrigl@gmail.com
                     </a>
                   </h3>
-                  <div className="social">
+                  <section className="social-container">
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -110,24 +110,15 @@ class Home extends Component {
                     >
                       <img src="snapchat.png" alt="Snapchat" />
                     </a>
-                  </div>
+                  </section>
                   <div className="audio-clips">
                     <p>
                       Click below to listen to examples of Mark's voiceover
                       work.
                     </p>
                     <div className="container">
-                      <iframe
-                        style={{ border: 0 }}
-                        className="audio"
-                        src="https://drive.google.com/file/d/1V_DiuqM4wgeDFG7OxZPP84pSIBwZYNP9/preview?usp=sharing"
-                        autoplay="false"
-                      />
-                      <iframe
-                        className="audio"
-                        src="https://drive.google.com/file/d/1XsFBzYBRblQEBYZMp4T2pkpa_DuHjAZS/preview?usp=sharing"
-                        autoplay="false"
-                      />
+                      <audio className="audio" controls src={require("audio/REEL_2023_RADIO_PROMOS.wav").default} type="audio/wav" />
+                      <audio className="audio" controls src={require("audio/shorter115.wav").default} type="audio/wav" />
                     </div>
                   </div>
                   <div className="twitter">
