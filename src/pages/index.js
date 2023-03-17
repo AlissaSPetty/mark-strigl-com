@@ -70,8 +70,8 @@ class Home extends Component {
                     who is currently available for voice work.
                   </h2>
                   <h3>
-                    <a href="mailto:markstrigl@gmail.com">
-                      markstrigl@gmail.com
+                    <a href="mailto:striglmark@gmail.com">
+                      striglmark@gmail.com
                     </a>
                   </h3>
                   <section className="social-container">
@@ -160,7 +160,7 @@ class Home extends Component {
                     >
                       <div id="mc_embed_signup_scroll">
                         <label htmlFor="mce-EMAIL">
-                          Subscribe to my weekly newsletter
+                          Subscribe to my monthly newsletter
                         </label>
                         <input
                           type="email"
