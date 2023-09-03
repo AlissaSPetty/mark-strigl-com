@@ -132,9 +132,7 @@ class Home extends Component {
                 </div>
                 <div className="left">
                   {!this.state.isMobile && (
-                    <div>
-                      <Links />
-                    </div>
+                    <Links />
                   )}
                 </div>
               </div>
